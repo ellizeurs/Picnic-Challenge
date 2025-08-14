@@ -47,6 +47,25 @@ uvicorn app.main:app --reload
 
 A API ficará disponível em: `http://127.0.0.1:8000`
 
+6. Navegue até a pasta do front-end
+`````bash
+cd frontend/ticket-ui
+`````
+
+7. Instale as dependências
+
+`````bash
+npm install
+`````
+
+8. Inicie o servidor
+
+`````bash
+npm start
+`````
+
+O frontend será aberto automaticamente em `http://localhost:3000`.
+
 ---
 
 ## 📌 Rotas
