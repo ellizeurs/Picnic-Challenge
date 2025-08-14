@@ -13,14 +13,9 @@ class Person(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String, nullable=False)
-    # email agora é opcional
     email = Column(String, nullable=True, index=True)
-    # role obrigatório, armazenado como string (native_enum=False funciona bem no SQLite)
     role = Column(SAEnum(Role, name="role_enum", native_enum=False), nullable=False)
 
-    # Dica: manter unicidade por (email, role) quando email existir.
-    # Para casos sem email, evitamos UNIQ por (name, role) na base (pode colidir),
-    # e resolvemos na importação buscando por (name, role) quando email vier ausente.
     __table_args__ = (
         UniqueConstraint("email", "role", name="uq_people_email_role"),
     )
