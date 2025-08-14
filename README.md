@@ -9,8 +9,8 @@ Esta é uma API para categorização automática de tickets de suporte usando em
 1. Clone o repositório:
 
 ```bash
-git clone <REPO_URL>
-cd <PASTA_DO_PROJETO>
+git clone https://github.com/ellizeurs/Picnic-Challenge
+cd Picnic-Challenge
 ````
 
 2. Crie um ambiente virtual:
