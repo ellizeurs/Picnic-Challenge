@@ -158,3 +158,7 @@ A API ficará disponível em: `http://127.0.0.1:8000`
 2. Verifique a rota raiz.
 3. Teste as rotas `/tickets` e `/categories`.
 4. Confira a categorização automática dos tickets.
+
+---
+
+Repositório criado para o Picnic Challenge por Ellizeu Sena
