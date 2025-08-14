@@ -7,10 +7,25 @@ from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 from collections import Counter
 
+from fastapi.middleware.cors import CORSMiddleware
+
+# Allow CORS
+origins = [
+    "http://localhost:3000", 
+]
+
+
 # Cria tabelas
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="Ticket Categorizer")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Modelo leve MiniLM
 model = SentenceTransformer("all-MiniLM-L6-v2")
