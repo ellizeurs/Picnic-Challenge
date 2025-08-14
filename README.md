@@ -68,7 +68,7 @@ O frontend será aberto automaticamente em `http://localhost:3000`.
 
 ---
 
-## 📌 Rotas
+## 📌 Rotas do back-end
 
 ### 1. Rota raiz
 
